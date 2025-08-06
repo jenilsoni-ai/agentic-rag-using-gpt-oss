@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Agentic RAG System with GPT-OSS via Hugging Face and Streamlit UI
 """
@@ -20,8 +19,6 @@ from langgraph.graph import MessagesState, StateGraph, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
 from pydantic import BaseModel, Field
 from langchain_core.messages import BaseMessage
-
-# OpenAI SDK for GPT-OSS
 from openai import OpenAI
 
 
@@ -307,7 +304,7 @@ def main():
         
         # OpenAI API key input
         openai_api_key = st.text_input(
-            "OpenAI API Key (Optional)", 
+            "OpenAI API Key", 
             type="password",
             help="For better embeddings. If not provided, will use HF embeddings"
         )
